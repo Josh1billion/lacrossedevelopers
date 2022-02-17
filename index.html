@@ -18,9 +18,22 @@
             font-family: 'Montserrat', sans-serif;
 		}
 
-        h1 {
-            font-size: 60px;
-        }
+    h1 {
+        font-size: 40px;
+    }
+
+    .main-container {
+      width: 80%;
+      max-width: 800px;
+      background: white;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+      border-radius: 10px;
+      padding: 10px;
+      filter: drop-shadow(8px 8px 6px black);
+
+    }
 
 
 	</style>
@@ -28,64 +41,13 @@
 
 <body>
     
-    <canvas style="position: absolute; top: 0; left: 0; opacity: 0.2; z-index: 1" id="q" width="100%" height="100%">Sorry Browser Won't Support</canvas><br/><br/>
-        </canvas>
-        <script>
-            $(document).ready(function(){
-            var s=window.screen;
-            var width = q.width=s.width;
-            var height = q.height;
-            var yPositions = Array(300).join(0).split('');
-            var ctx=q.getContext('2d');
-            q.width  = window.innerWidth;
-            q.height = window.innerHeight;
-            
-            
-            var draw = function () {
-              ctx.fillStyle='rgba(0,0,0,.05)';
-              ctx.fillRect(0,0, q.width, q.height);
-              ctx.fillStyle='#0F0';
-              ctx.font = '10pt Georgia';
-              yPositions.map(function(y, index){
-                var allChars = "LaCrosse";
-                text = allChars.charAt(Math.random() * allChars.length);
-                x = (index * 10)+10;
-                q.getContext('2d').fillText(text, x, y);
-                if(y > 100 + Math.random()*1e4)
-                {
-                  yPositions[index]=0;
-                }
-                else
-                {
-                  yPositions[index] = y + 10;
-                }
-              });
-            };
-            RunMatrix();
-            function RunMatrix()
-            {
-            if(typeof Game_Interval != "undefined") clearInterval(Game_Interval);
-                    Game_Interval = setInterval(draw, 33);
-            }
-            function StopMatrix()
-            {
-            clearInterval(Game_Interval);
-            }
-            //setInterval(draw, 33);
-            $("button#pause").click(function(){
-            StopMatrix();});
-            $("button#play").click(function(){RunMatrix();});
-            
-            })
-    </script>
-
-	<div class="main-container" style="z-index: 2; position: absolute; top: 0; left: 0;">
+	<div class="main-container" style="z-index: 2;">
         <h1>La Crosse, WI software developer meetup group</h1>
-        <h2>(better website coming "soon"...)</h2>
 
-        <h3>Meetings info</h3>
+        <h3>Meeting info</h3>
         <p>As of February 2022, meetings are held on the last Thursday evening of every month.</p>
-        <p>Meeting location will be posted in Discord.</p>
+        <p>Meeting location will be posted in <a href="https://discord.gg/FydBQpn">Discord</a>.</p>
+        <p>We also post meeting info on the calendar at <a href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a></p>
 
         <h3>About</h3>
         <p>This is a fairly new group that started in the fall of 2019.  We are a laid-back group of programmers, entrepreneuers, tech enthusiasts, and game developers who hang out, discuss technology.  We welcome everyone, from experienced programmers, to students, to people who aren't into programming but enjoy technology.</p>
