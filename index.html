@@ -1,104 +1,159 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>La Crosse, WI software developer meetup group</title>
-        <meta name="description" content="A meetup group for software developers in the La Crosse, Wisconsin area." />
-        <meta name="keywords" content="wisconsin developers programming programmers" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="EN" />
-        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Crosse Developers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2ecc71;
+            --background-color: #f4f4f4;
+            --text-color: #333;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
 
-        <style>
-            body {
-                background-color: #fef6e1;
-                color: #333;
-                font-family: "Montserrat", sans-serif;
-                margin: 0;
-                padding: 0;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 600px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        h1, h2 {
+            color: var(--primary-color);
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #27ae60;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
             }
-
-            header {
-                background-color: #7ab5d3;
-                color: #fff;
-                padding: 20px;
-                text-align: center;
-            }
-
-            header img {
-                max-width: 500px;
-                height: auto;
-            }
-
-            .main-container {
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin: 20px auto;
-                max-width: 800px;
-                padding: 20px;
-            }
-
-            h1 {
-                font-size: 32px;
-                margin-top: 0;
-            }
-
-            h3 {
-                font-size: 24px;
-            }
-
-            p {
-                font-size: 18px;
-                line-height: 1.6;
-            }
-
-            a {
-                color: #007bff;
-                text-decoration: none;
-            }
-
-            a:hover {
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-
-    <body>
-        <header>
-            <img src="images/logo.png" alt="Logo" />
-            <h1>La Crosse, WI software developer meetup group</h1>
-        </header>
-
-        <div class="main-container">
-            <h3>About</h3>
-            <p>
-                This is a group that started with our first meeting on November 7, 2019. We are a laid-back group of programmers, entrepreneurs, tech enthusiasts, and game developers who hang out, discuss technology, and give presentations on topics of interest to each other. We welcome everyone, from experienced programmers, to students, to people who aren't into programming but enjoy technology.
-            </p>
-
-            <h3>Meeting info</h3>
-            <p>
-                As of November 2023, meetings are held on the 4th Tuesday evening of every month at 6 PM at <a href="https://www.inlandpackaging.com/">Inland Packaging</a> (north visitor entrance @ 3209 Airport Rd, La Crosse, WI 54603).
-            </p>
-            <p>
-                If you have trouble getting into the building or need directions, please give a shout on the <a href="https://discord.gg/YxYCs4wExk">Discord</a>. Meeting cancelations, reschedulings, etc. will also be posted there.
-            </p>
-            <p>
-                We also post meeting info on the calendar at <a href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a>
-            </p>
-
-            <h3>Discord</h3>
-            <p>
-                We've all been using Discord to chat, brainstorm ideas, and plan things out. Feel free to join with the link below.
-            </p>
-            <p>
-                Discord: <a href="https://discord.gg/FydBQpn">https://discord.gg/FydBQpn</a>
-            </p>
-
-            <h3>Email and Reminders</h3>
-            <p>
-                If you have more questions or want to be invited to the recurring meeting for reminder notifications please email us at <a href="mailto:lacrossedevelopers@gmail.com">lacrossedevelopers@gmail.com</a>
-            </p>
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="La Crosse Developers Logo" class="logo">
+            </div>
         </div>
-    </body>
+    </header>
+
+    <div class="container">
+        <main>
+            <div class="content">
+                <section id="about" class="card">
+                    <h2><i class="fas fa-info-circle"></i> About</h2>
+                    <p>This is a group that started with our first meeting on November 7, 2019. We are a laid-back group of programmers, entrepreneurs, tech enthusiasts, and game developers who hang out, discuss technology, and give presentations on topics of interest to each other. We welcome everyone, from experienced programmers, to students, to people who aren't into programming but enjoy technology.</p>
+                </section>
+
+                <section id="meetings" class="card">
+                    <h2><i class="fas fa-calendar-alt"></i> Meeting Info</h2>
+                    <p>As of November 2023, meetings are held on the 4th Tuesday evening of every month at 6 PM at Inland Packaging (north visitor entrance @ 3209 Airport Rd, La Crosse, WI 54603).</p>
+                    <p>If you have trouble getting into the building or need directions, please give a shout on the Discord. Meeting cancelations, reschedulings, etc. will also be posted there.</p>
+                    <p>We also post meeting info on the calendar at <a href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a></p>
+                </section>
+            </div>
+
+            <aside>
+                <div class="card">
+                    <h2><i class="fab fa-discord"></i> Discord</h2>
+                    <p>We've all been using Discord to chat, brainstorm ideas, and plan things out. Feel free to join with the link below.</p>
+                    <a href="https://discord.gg/FydBQpn" class="btn">Join our Discord</a>
+                </div>
+
+                <div class="card">
+                    <h2><i class="fas fa-envelope"></i> Contact</h2>
+                    <p>If you have more questions or want to be invited to the recurring meeting for reminder notifications please email us at:</p>
+                    <a href="mailto:lacrossedevelopers@gmail.com" class="btn">lacrossedevelopers@gmail.com</a>
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 La Crosse Developers. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
