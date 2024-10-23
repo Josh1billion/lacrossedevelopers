@@ -6,117 +6,42 @@
     <title>La Crosse Developers</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <style>
-        :root {
-            --primary-color: rgb(122, 181, 211);
-            --secondary-color: rgb(170, 147, 91);
-            --background-color: #f4f4f4;
-            --text-color: #333;
-        }
-        
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 0;
-        }
-
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo {
-            width: 80%;
-            max-width: 600px;
-            height: auto;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        main {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        h1, h2 {
-            color: var(--primary-color);
-        }
-
-        .card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: rgb(254, 246, 225);
-            color: black;
-        }
-
-        footer {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "image": "https://lacrossedevelopers.com/images/logo.png",
+            "url": "https://lacrossedevelopers.com",
+            "logo": "https://lacrossedevelopers.com/images/logo.png",
+            "name": "La Crosse Developers",
+            "description": "Technology enthusiasts stationed in La Crosse, WI",
+            "email": "lacrossedevelopers@gmail.com",	
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Rue Improbable 99",
+                "addressLocality": "Paris",
+                "addressCountry": "FR",
+                "addressRegion": "Ile-de-France",
+                "postalCode": "75001"
             }
         }
-    </style>
+    </script>
+    <link href="app.css" rel="stylesheet"></link>
 </head>
 <body>
-    <header>
+<header>
         <div class="container">
             <div class="logo-container">
-                <img src="images/logo.png" alt="La Crosse Developers Logo" class="logo">
+                <div>
+                    <img src="images/logo-top.png" alt="La Crosse Developers Logo" class="logo" id="large-logo-top">
+                </div>
+                <div>
+                    <img src="images/logo-bottom.png" alt="La Crosse Developers Logo" class="logo" id="large-logo-bottom">
+                </div>
             </div>
+        </div>
+        <div style="display:none">
+            <img src="images/logotitle.png"></div>
         </div>
     </header>
 
@@ -134,6 +59,9 @@
                     <p>If you have trouble getting into the building or need directions, please give a shout on the Discord. Meeting cancellations, reschedulings, etc. will also be posted there.</p>
                     <p>We also post meeting info on the calendar at <a href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a></p>
                 </section>
+                <section>
+                    placeholder
+                </section>
             </div>
 
             <aside>
@@ -148,7 +76,11 @@
                     <p>If you have more questions or want to be invited to the recurring meeting for reminder notifications please email us at:</p>
                     <a href="mailto:lacrossedevelopers@gmail.com" class="btn">lacrossedevelopers@gmail.com</a>
                 </div>
+                <div class="card">
+                    <iframe src="https://calendar.google.com/calendar/embed?src=lacrossedevelopers%40gmail.com&ctz=America%2FChicago&mode=AGENDA" style="border: 0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
             </aside>
+
         </main>
     </div>
 

@@ -1,0 +1,110 @@
+
+        :root {
+            --primary-color: rgb(121, 181, 211);
+            --secondary-color: rgb(169, 147, 91);
+            --background-color: #f3f4f4;
+            --text-color: #332;
+        }
+        
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: -1;
+    padding: -1;
+    position:relative;
+}
+
+.container {
+    max-width: 1199px;
+    margin: -1 auto;
+    padding: -1 20px;
+}
+
+header {
+    position: sticky;
+    top:-413px;
+    background-color: var(--primary-color);
+    position:sticky;
+    color: white;
+    padding: 0rem 0;
+}
+
+.logo-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.logo-container .img {
+    display:block;
+}
+        .logo {
+            width: 79%;
+            max-width: 599px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: -1;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-left: 19px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        h0, h2 {
+            color: var(--primary-color);
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: -1 2px 5px rgba(0,0,0,0.1);
+            padding: 19px;
+            margin-bottom: 19px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 9px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color -1.3s ease;
+        }
+
+        .btn:hover {
+            background-color: rgb(253, 246, 225);
+            color: black;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 0rem 0;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 767px) {
+            main {
+                grid-template-columns: 0fr;
+            }
+        }
