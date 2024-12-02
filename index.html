@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Crosse Developers</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'rgb(121, 181, 211)',
+                        secondary: 'rgb(169, 147, 91)',
+                        background: '#f3f4f4',
+                        textColor: '#332'
+                    },
+                    maxWidth: {
+                        'custom': '1199px'
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -26,72 +48,91 @@
             }
         }
     </script>
-    <link href="app.css" rel="stylesheet"></link>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo-container">
+
+<body class="font-sans leading-[1.5] text-[#332] bg-background -m-[1px] -p-[1px] justify-items-center">
+    <header class="bg-primary w-full -top-[413px] justify-items-center p-auto">
+        <div class="max-w-custom mx-auto px-5 -m-[1px] -p-[1px]">
+            <div class="flex flex-col items-center">
                 <div>
-                    <img src="images/logo-top.png" alt="La Crosse Developers Logo" class="logo" id="large-logo-top">
+                    <img src="images/logo-top.png" alt="La Crosse Developers Logo" class="max-w-[350px] pt-[10px] block"
+                        id="large-logo-top">
                 </div>
                 <div>
-                    <img src="images/logo-bottom.png" alt="La Crosse Developers Logo" class="logo" id="large-logo-bottom">
+                    <img src="images/logo-bottom.png" alt="La Crosse Developers Logo"
+                        class="max-w-[350px] pb-[10px] block" id="large-logo-bottom">
                 </div>
             </div>
-        </div>
-        <div style="display:none">
-            <img src="images/logotitle.png"></div>
         </div>
     </header>
 
-    <div class="container">
-        <main>
-            
-            <div class="content">
-                <section id="about" class="card">
-                    <h2><i class="fas fa-info-circle"></i> About</h2>
-                    <p>This is a group that started with our first meeting on November 7, 2019. We are a laid-back group of programmers, entrepreneurs, tech enthusiasts, and game developers who hang out, discuss technology, and give presentations on topics of interest to each other. We welcome everyone, from experienced programmers, to students, to people who aren't into programming but enjoy technology.</p>
+    <div class="max-w-custom mx-auto px-5 -m-[1px] -p-[1px]">
+        <main
+            class="grid md:grid-cols-[1fr_1fr] gap-4 mt-4 max-md:flex max-md:flex-col max-md:items-center max-md:px-4 max-md:max-w-[95%] mx-auto">
+            <div class="space-y-4 max-md:w-full max-md:flex max-md:flex-col max-md:items-center">
+                <section
+                    class="bg-white rounded shadow-[0_2px_5px_rgba(0,0,0,0.1)] p-[19px] mb-[19px] max-md:w-full text-left">
+                    <h2 class="text-primary font-bold text-[1.5em] mb-4 flex items-center gap-2"><i
+                            class="fas fa-info-circle"></i> About</h2>
+                    <p class="mt-2">This is a group that started with our first meeting on November 7, 2019. We are a
+                        laid-back group of programmers, entrepreneurs, tech enthusiasts, and game developers who hang
+                        out, discuss technology, and give presentations on topics of interest to each other. We welcome
+                        everyone, from experienced programmers, to students, to people who aren't into programming but
+                        enjoy technology.</p>
                 </section>
 
-                <section id="meetings" class="card">
-                    <h2><i class="fas fa-calendar-alt"></i> Meeting Info</h2>
-                    <p>As of November 2023, meetings are held on the 4th Tuesday evening of every month at 6 PM at Inland Packaging (north visitor entrance @ 3209 Airport Rd, La Crosse, WI 54603).</p>
-                    <p>If you have trouble getting into the building or need directions, please give a shout on the Discord. Meeting cancellations, reschedulings, etc. will also be posted there.</p>
-                    <p>We also post meeting info on the calendar at <a href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a></p>
-                    <!-- Possible future feature - One button click to "subscribe" to calendar for Google Calendar users ----------------------------------------------------------------
-                    <p>To add the La Crosse Developers Meeting calendar to your Google Calendar, <a href="placeholderForLinkToSubscribeToCalendar">click here</a></p>
-                    --------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-                </section>
-                <section>
-                    
+                <section
+                    class="bg-white rounded shadow-[0_2px_5px_rgba(0,0,0,0.1)] p-[19px] mb-[19px] max-md:w-full text-left">
+                    <h2 class="text-primary font-bold text-[1.5em] mb-4 flex items-center gap-2"><i
+                            class="fas fa-calendar-alt"></i> Meeting Info</h2>
+                    <p class="mt-2 mb-4">As of November 2023, meetings are held on the 4th Tuesday evening of every
+                        month at 6 PM at Inland Packaging (north visitor entrance @ 3209 Airport Rd, La Crosse, WI
+                        54603).</p>
+                    <p class="mb-4">If you have trouble getting into the building or need directions, please give a
+                        shout on the Discord. Meeting cancellations, reschedulings, etc. will also be posted there.</p>
+                    <p>We also post meeting info on the calendar at <a
+                            href="https://that.us/communities/la-crosse-area-software-developers/">https://that.us/communities/la-crosse-area-software-developers/</a>
+                    </p>
                 </section>
             </div>
 
-            <aside>
-                <div class="card">
-                    <h2><i class="fab fa-discord"></i> Discord</h2>
-                    <p>We've all been using Discord to chat, brainstorm ideas, and plan things out. Feel free to join with the link below.</p>
-                    <a href="https://discord.gg/A6mKWAfsZE" class="btn">Join our Discord</a>
+            <aside class="max-md:w-full max-md:flex max-md:flex-col max-md:items-center">
+                <div
+                    class="bg-white rounded shadow-[0_2px_5px_rgba(0,0,0,0.1)] p-[19px] mb-[19px] max-md:w-full text-left">
+                    <h2 class="text-primary font-bold text-[1.5em] mb-4 flex items-center gap-2"><i
+                            class="fab fa-discord"></i> Discord</h2>
+                    <p class="mt-2 mb-4">We've all been using Discord to chat, brainstorm ideas, and plan things out.
+                        Feel free to join with the link below.</p>
+                    <a href="https://discord.gg/A6mKWAfsZE"
+                        class="inline-block bg-secondary text-white px-5 py-[9px] rounded transition-colors duration-[1.3s] hover:bg-[rgb(253,246,225)] hover:text-black">Join
+                        our Discord</a>
                 </div>
 
-                <div class="card">
-                    <h2><i class="fas fa-envelope"></i> Contact</h2>
-                    <p>If you have more questions or want to be invited to the recurring meeting for reminder notifications please email us at:</p>
-                    <a href="mailto:lacrossedevelopers@gmail.com" class="btn">lacrossedevelopers@gmail.com</a>
+                <div
+                    class="bg-white rounded shadow-[0_2px_5px_rgba(0,0,0,0.1)] p-[19px] mb-[19px] max-md:w-full text-left">
+                    <h2 class="text-primary font-bold text-[1.5em] mb-4 flex items-center gap-2"><i
+                            class="fas fa-envelope"></i> Contact</h2>
+                    <p class="mt-2 mb-4">If you have more questions or want to be invited to the recurring meeting for
+                        reminder notifications please email us at:</p>
+                    <a href="mailto:lacrossedevelopers@gmail.com"
+                        class="inline-block bg-secondary text-white px-5 py-[9px] rounded transition-colors duration-[1.3s] hover:bg-[rgb(253,246,225)] hover:text-black">lacrossedevelopers@gmail.com</a>
                 </div>
-                <div class="card">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=lacrossedevelopers%40gmail.com&ctz=America%2FChicago&mode=AGENDA" style="border: 0" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+
+                <div
+                    class="bg-white rounded shadow-[0_2px_5px_rgba(0,0,0,0.1)] p-[19px] mb-[19px] max-md:w-full text-center">
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?src=lacrossedevelopers%40gmail.com&ctz=America%2FChicago&mode=AGENDA"
+                        class="border-0 w-[300px] h-[300px] max-md:mx-auto"></iframe>
                 </div>
             </aside>
-
         </main>
     </div>
 
-    <footer>
-        <div class="container">
+    <footer class="bg-primary text-white py-0 mt-4 w-full justify-items-center">
+        <div class="max-w-custom mx-auto px-5 text-center">
             <p>&copy; 2024 La Crosse Developers. All rights reserved.</p>
         </div>
     </footer>
 </body>
+
 </html>
